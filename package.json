@@ -12,6 +12,11 @@
     "jade": "*",
     "mongoose": "*",
     "connect-mongodb": "*",
-    "async": "*"
+    "async": "*",
+    "zlib": "*"
+  },
+  "engines": {
+      "node": "0.6.13",
+      "npm": "1.1.41"
   }
 }
