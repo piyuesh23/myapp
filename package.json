@@ -11,6 +11,7 @@
     "stylus": "*",
     "jade": "*",
     "mongoose": "*",
-    "connect-mongodb": "*"
+    "connect-mongodb": "*",
+    "async": "*"
   }
 }

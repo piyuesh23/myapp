@@ -32,7 +32,7 @@ exports.create = function(req, res) {
     else {
       res.redirect('/article/' + article._id)
     }
-  });
+  })
 }
 
 // View an article
@@ -40,12 +40,14 @@ exports.show = function(req, res){
   var article = new Article();
   Article
     .findOne({_id: req.params.id})
+    .populate('comments')
     .exec(function(err, article) {
+      console.log(article)
     res.render('articles/show', {
       pagetitle: article.title,
       article: article
-    });
-  });
+    })
+  })
 }
 
 // Article index page
@@ -59,9 +61,9 @@ exports.index = function(req, res) {
         res.render('articles/index', {
           pagetitle: '',
           articles: Articles
-        });
+        })
       })
-    });
+    })
 }
 
 // Article edit page
@@ -74,5 +76,16 @@ exports.edit = function(req, res) {
           pagetitle: '',
           article: article,
       })
-  });
+  })
+}
+
+//Article delete page
+exports.destroy = function(req, res) {
+  Article
+    .findOne({_id: req.params.id})
+    .exec(function(err, article) {
+    article.remove(function(err){
+      res.redirect('/articles')
+    })
+  })
 }

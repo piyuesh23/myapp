@@ -1,0 +1,7 @@
+
+if (comment)
+  .comment
+    |  :&nbsp;
+    != comment.body
+    br
+    span.date #{formatDate(comment.createdAt, "%b %d, %Y at %I:%M %p")}
