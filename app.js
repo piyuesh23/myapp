@@ -106,7 +106,7 @@ app.get('/', articles.index);
 app.get('/articles', articles.index)
 
 app.get('/tags/:tag', tags.index)
-console.log(process.env.NODE_ENV);
+
 http.createServer(app).listen(app.get('port'), function(){
   console.log("Express server listening on port " + app.get('port'));
 });
