@@ -3,6 +3,6 @@ module.exports = {
     db: 'mongodb://localhost:27017/noobjs_dev'
   }, 
   'production' : {
-    db: 'mongodb://piyuesh23:9341255505pk@mars.mongohq.com:10012/app9241069'
+    db: 'mongodb://piyuesh23:9341255505@alex.mongohq.com:10096/app9241069'
   }
 }
