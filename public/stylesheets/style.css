@@ -121,6 +121,7 @@ div.content-wrapper .comment {
 }
 div.main-content-edit {
   padding: 10px 10px 10px 10px;
+  margin-top: 20px;
 }
 div.control-group {
   margin-bottom: 20px;
@@ -151,4 +152,8 @@ div.article-alter-form a {
 }
 div.article-alter-form a:hover {
   background-color: #fff;
+}
+div.no-content {
+  font-size: 20px;
+  margin: 10px 10px 10px 10px;
 }

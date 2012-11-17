@@ -1,5 +1,10 @@
 extends ../layouts/layout_articles
 block content
+  if articles.length == 0
+    div.no-content
+      span.no-articles No articles have been added yet. 
+      span.new-article
+        a.article-add(href="article/add") Add new article
   .article-list
     each article in articles
       count_articles = articles.length
