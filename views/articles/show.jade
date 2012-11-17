@@ -3,11 +3,11 @@ extends ../layouts/layout_articles
 block content
   div.content-wrapper
     h1.article-title=article.title
-    form.center.form-inline.confirm(action="/articles/"+article.id, method="post")
-      a.btn(href='/article/'+article._id+'/edit', title="edit") Edit
+    div.article-alter-form
+      form.center.form-inline.confirm(action="/articles/"+article.id, method="post")
+      a.btn.article-edit(href='/article/'+article._id+'/edit', title="edit") Edit
       &nbsp;&nbsp;
-      input(type="hidden", name="_method", value="DELETE")
-      button.btn.btn-danger(type="submit") delete
+      a.btn.article-delete(href='/article/'+article._id+'/delete', title="delete") Delete
     p.article-content=article.body
     
     if (article.tags)

@@ -85,7 +85,6 @@ div.main-content-edit {
   background-color: #fff;
   border-radius: 10px;
   margin-bottom: 10px;
-  margin-top: 20px;
 }
 li.social a {
   color: #000;
@@ -141,4 +140,15 @@ div.controls textarea {
 }
 div.controls textarea#desc {
   height: 200px;
+}
+div.article-alter-form {
+  background-color: #b9d1c2;
+  padding: 5px 10px;
+}
+div.article-alter-form a {
+  color: #515451;
+  text-decoration: none;
+}
+div.article-alter-form a:hover {
+  background-color: #fff;
 }

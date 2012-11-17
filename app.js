@@ -99,7 +99,7 @@ app.get('/article/add', articles.add)
 app.post('/article/create', articles.create)
 app.get('/article/:id', articles.show)
 app.get('/article/:id/edit', articles.edit)
-app.del('/articles/:id', articles.destroy)
+app.get('/article/:id/delete', articles.destroy)
 app.post('/articles/:id/comments', comments.create)
 
 app.get('/', articles.index);
