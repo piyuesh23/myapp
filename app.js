@@ -93,6 +93,7 @@ var mongoose = require('mongoose')
 mongoose.connect(config.db)
 var articles = require('./controllers/articles.js')
 var comments = require('./controllers/comments.js')
+var tags = require('./controllers/tags')
 
 app.get('/article/add', articles.add)
 app.post('/article/create', articles.create)
@@ -102,8 +103,9 @@ app.del('/articles/:id', articles.destroy)
 app.post('/articles/:id/comments', comments.create)
 
 app.get('/', articles.index);
-app.get('/articles', articles.index);
+app.get('/articles', articles.index)
 
+app.get('/tags/:tag', tags.index)
 http.createServer(app).listen(app.get('port'), function(){
   console.log("Express server listening on port " + app.get('port'));
 });

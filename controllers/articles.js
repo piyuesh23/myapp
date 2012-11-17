@@ -42,7 +42,6 @@ exports.show = function(req, res){
     .findOne({_id: req.params.id})
     .populate('comments')
     .exec(function(err, article) {
-      console.log(article)
     res.render('articles/show', {
       pagetitle: article.title,
       article: article
