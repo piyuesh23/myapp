@@ -7,8 +7,8 @@ block content
         count = 1
       if count == 1
         li.article-title.first: a(href='article/#{article._id}') #{article.title} 
-          span.comment-count #1
+          span.comment-count ##{article.comments.length}
         count = 0
       else
         li.article-title: a(href='article/#{article._id}') #{article.title} 
-          span.comment-count #1
+          span.comment-count ##{article.comments.length}
