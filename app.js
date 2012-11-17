@@ -2,12 +2,12 @@
 /**
  * Module dependencies.
  */
-
+var env = process.env.NODE_ENV || 'development'
 var express = require('express')
   , http = require('http')
   , fs = require('fs')
   , mongoStore = require('connect-mongodb')
-  , config = require('./config/config.js')
+  , config = require('./config/config.js')[env]
   , async = require('async')
   , path = require('path');
 
