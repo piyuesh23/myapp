@@ -85,6 +85,7 @@ div.main-content-edit {
   background-color: #fff;
   border-radius: 10px;
   margin-bottom: 10px;
+  margin-top: 20px;
 }
 li.social a {
   color: #000;
@@ -93,4 +94,51 @@ li.social a {
 li.social a:hover {
   color: #fff;
   text-decoration: none;
+}
+div.content-wrapper {
+  margin: 10px 10px 10px 10px;
+}
+h1.article-title {
+  text-transform: capitalize;
+  color: #515451;
+}
+div.content-wrapper .article-content {
+  text-align: justify;
+  font-size: 14px;
+}
+textarea#comment {
+  width: 100%;
+}
+div.content-wrapper .tags a.tag {
+  color: #515451;
+  text-decoration: none;
+}
+div.content-wrapper .tags a.tag:hover {
+  color: #000;
+  text-decoration: none;
+}
+div.content-wrapper .comment {
+  margin-bottom: 20px;
+}
+div.main-content-edit {
+  padding: 10px 10px 10px 10px;
+}
+div.control-group {
+  margin-bottom: 20px;
+}
+div.control-group label {
+  font-size: 20px;
+  font-weight: bold;
+}
+div.control-group input[type="text"] {
+  height: 25px;
+  font-size: 18px;
+}
+div.controls input,
+div.controls textarea {
+  margin-top: 10px;
+  width: 100%;
+}
+div.controls textarea#desc {
+  height: 200px;
 }
