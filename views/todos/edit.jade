@@ -1,0 +1,30 @@
+extends ../layouts/layout_admin
+block content
+  - var action = '/todo'
+  if (!todo.isNew)
+    - action += '/'+todo.id
+  else
+    - action += '/create'
+  form.todo-edit(method="post", action=action)
+    if (!todo.isNew)
+      input(type="hidden", name="_method", value="PUT")
+
+    .control-group
+      label.control-label(for='title') Title
+      .controls
+        input#title.input-xlarge(type='text', name="task", value=todo.task, placeholder='Enter the task')
+
+    .control-group
+      label.control-label(for='desc') Body
+      .controls
+        textarea#desc.input-xxlarge(type='text', rows="5", name="body", placeholder='Enter the task description')=todo.body
+
+    .control-group
+      label.control-label(for='tags') Tags
+      .controls
+        input#tags(type='text', name="tags", value=todo.tags, placeholder='Enter the tags')
+
+    .form-actions
+      button.btn.btn-primary(type='submit') Save changes
+      &nbsp;
+      a.btn(href='/todo', title="cancel") Cancel

@@ -34,22 +34,26 @@ div.main-content
   background-color: #fff
   border-radius: 10px
   margin-bottom: 10px
-.main-content li.article-title
+.main-content li.article-title,
+.main-content li.todo-task
   font-size: 24px
   list-style: none
   border-bottom: 2px solid #515451
   padding: 15px 10px 15px 10px
-.main-content li.article-title a
+.main-content li.article-title a,
+.main-content li.todo-task a
   color: #515451
   text-decoration: none
 .main-content li.article-title span.comment-count 
   float: right
 .main-content .article-list
   min-height: 600px
-.main-content li.article-title:hover
+.main-content li.article-title:hover,
+.main-content li.todo-task:hover
   background-color: #b9d1c2
   color: #000
-.main-content li.article-title.first:hover
+.main-content li.article-title.first:hover,
+.main-content li.todo-task.first:hover
   background-color: #b9d1c2
   border-top-left-radius: 10px
   border-top-right-radius: 10px
@@ -120,3 +124,27 @@ div.article-alter-form a:hover
 div.no-content
   font-size: 20px
   margin: 10px 10px 10px 10px
+.main-content .todo-list
+  min-height: 600px
+a.edit-task
+  float: right
+  margin-right: 15px
+a.delete-task
+  float: right
+ul.menu-items
+  float: right
+li.menu-item
+  float: left
+  list-style: none
+a
+  text-decoration: none
+a.menu-link
+  font-size: 24px
+  color: #515451
+  background-color: white
+  border-top-right-radius: 10px
+  border-top-left-radius: 10px
+  padding: 10px
+  margin-left: 10px
+li.menu-item.first a.menu-link
+  margin-left: 0px

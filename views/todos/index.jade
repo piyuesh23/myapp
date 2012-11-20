@@ -1,0 +1,15 @@
+extends ../layouts/layout_articles
+block content
+  div.todo-list
+    count = 0
+    each todo in todos
+      if count == 0
+        li.todo-task.first: a(href="/todo/#{todo._id}") #{todo.task}
+          a.delete-task(href="/todo/#{todo._id}/delete") delete
+          a.edit-task(href="/todo/#{todo._id}/edit") edit
+          input#tags(type='checkbox', name="tags")
+      else
+        li.todo-task: span.task-title: a(href="/todo/#{todo._id}") #{todo.task}
+          a.delete-task(href="/todo/#{todo._id}/delete") delete
+          a.edit-task(href="/todo/#{todo._id}/edit") edit
+      -count = count + 1

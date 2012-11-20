@@ -1,0 +1,20 @@
+extends ../layouts/layout_articles
+
+block content
+  todo.task
+  div.content-wrapper
+    h1.article-title=todo.task
+    div.article-alter-form
+      a.btn.article-edit(href='/todo/#{todo._id}/edit', title="edit") Edit
+      &nbsp;&nbsp;
+      a.btn.article-delete(href='/todo/#{todo._id}/delete', title="delete") Delete
+    p.article-content=todo.description
+    
+    if (todo.tags)
+      .tags
+        | Tags :&nbsp;
+        each tag in todo.tags.split(',')
+          a.tag(href="/tags/"+tag)
+            i.icon-tags
+            |  #{tag}
+  div

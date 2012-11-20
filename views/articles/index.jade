@@ -6,14 +6,12 @@ block content
       span.new-article
         a.article-add(href="article/add") Add new article
   .article-list
+    count = 0
     each article in articles
-      count_articles = articles.length
-      if count != 0
-        count = 1
-      if count == 1
+      if count == 0
         li.article-title.first: a(href='article/#{article._id}') #{article.title} 
           span.comment-count ##{article.comments.length}
-        count = 0
       else
         li.article-title: a(href='article/#{article._id}') #{article.title} 
           span.comment-count ##{article.comments.length}
+      -{count = count + 1}

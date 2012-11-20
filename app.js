@@ -105,8 +105,14 @@ app.post('/articles/:id/comments', comments.create)
 app.get('/', articles.index);
 app.get('/articles', articles.index)
 
+var todo = require('./controllers/todo')
 app.get('/tags/:tag', tags.index)
-
+app.get('/todo/add', todo.add)
+app.post('/todo/create', todo.create)
+app.get('/todo', todo.index)
+app.get('/todo/:id', todo.show)
+app.get('/todo/:id/edit', todo.edit)
+app.get('/todo/:id/delete', todo.destroy)
 http.createServer(app).listen(app.get('port'), function(){
   console.log("Express server listening on port " + app.get('port'));
 });
