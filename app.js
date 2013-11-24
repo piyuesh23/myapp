@@ -2,7 +2,7 @@
 /**
  * Module dependencies.
  */
-var env = process.env.NODE_ENV || 'development'
+var env = process.env.NODE_ENV || 'production'
 var express = require('express')
   , http = require('http')
   , fs = require('fs')
@@ -72,7 +72,7 @@ app.use(express.session({
     url: config.db,
     collection : 'sessions'
   })
-})) 
+}))
 
 // Bootstrap models
 var models_path = __dirname + '/models'
