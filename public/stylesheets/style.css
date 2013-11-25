@@ -193,3 +193,66 @@ a.menu-link {
 li.menu-item.first a.menu-link {
   margin-left: 0px;
 }
+div#todoapp {
+  margin: 10px;
+}
+input#new-todo {
+  width: 95%;
+  margin: 20px 20px;
+  height: 50px;
+  box-sizing: border-box;
+  font-size: xx-large;
+}
+div.todo div.edit input {
+  width: 100%;
+  height: 50px;
+  box-sizing: border-box;
+  font-size: xx-large;
+}
+#todo-list .edit {
+  display: none;
+}
+#todo-list li {
+  padding: 12px 20px 11px 0;
+  position: relative;
+  font-size: 24px;
+  line-height: 1.1em;
+  border-bottom: 1px solid #ccc;
+}
+#todo-list .check {
+  position: relative;
+  top: 9px;
+  margin: 0 10px 0 7px;
+  float: left;
+}
+ul {
+  list-style: none;
+}
+ul#todo-list {
+  padding: 0px 15px;
+}
+#todo-stats {
+  margin-top: 10px;
+  margin-left: 20px;
+  color: #777;
+}
+#todo-stats .todo-count .number {
+  font-weight: bold;
+  color: #333;
+}
+#todo-stats .todo-clear {
+  float: right;
+}
+#todo-stats .todo-clear a {
+  color: #777;
+  font-size: 12px;
+}
+#todo-stats .todo-clear a:visited {
+  color: #777;
+}
+#todo-list .editing .edit {
+  display: block;
+}
+#todo-list .editing .display {
+  display: none;
+}

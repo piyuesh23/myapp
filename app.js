@@ -2,7 +2,7 @@
 /**
  * Module dependencies.
  */
-var env = process.env.NODE_ENV || 'production'
+var env = process.env.NODE_ENV || 'development'
 var express = require('express')
   , http = require('http')
   , fs = require('fs')
@@ -107,12 +107,12 @@ app.get('/articles', articles.index)
 
 var todo = require('./controllers/todo')
 app.get('/tags/:tag', tags.index)
-app.get('/todo/add', todo.add)
-app.post('/todo/create', todo.create)
 app.get('/todo', todo.index)
-app.get('/todo/:id', todo.show)
-app.get('/todo/:id/edit', todo.edit)
-app.get('/todo/:id/delete', todo.destroy)
+app.get('/api/todo', todo.list)
+app.get('/api/todo/:id', todo.show)
+app.put('/api/todo/:id', todo.update)
+app.post('/api/todo', todo.create)
+app.delete('/api/todo/:id', todo.delete)
 http.createServer(app).listen(app.get('port'), function(){
   console.log("Express server listening on port " + app.get('port'));
 });

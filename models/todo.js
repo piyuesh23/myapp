@@ -1,22 +1,13 @@
 var mongoose = require('mongoose')
     , Schema = mongoose.Schema
 
-var getTag = function (tags) {
-  return tags.join(' ')
-}
-
-var setTag = function (tags) {
-  return tags.split(' ')
-}
-
 var todoSchema = new Schema({
-    task: {type : String, default : '', trim : true}
-  , description: {type : String, default : '', trim : true}
-  , tags: {type : [], get: getTag, set: setTag}
+    text: {type : String, default : '', trim : true}
+  , done: {type : Boolean, default : ''}
   , createdAt: {type : Date, default : Date.now}
 })
 
-todoSchema.path('task').validate(function (task) {
+todoSchema.path('text').validate(function (task) {
   return task.length > 0
 }, 'task title cannot be blank')
 
